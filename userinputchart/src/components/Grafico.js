@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import { Pie, Line, Bar } from "react-chartjs-2";
+import { Line, Bar, Radar } from "react-chartjs-2";
 
 export default class Grafico extends Component {
   constructor(props) {
     super(props);
     this.state = {
       chartTypes: {
-        pie: Pie,
+        radar: Radar,
         line: Line,
         bar: Bar
       },
@@ -14,7 +14,7 @@ export default class Grafico extends Component {
         labels: props.labels || [],
         datasets: [
           {
-            label: "My First dataset",
+            title:  "Il mio grafico",
             fill: false,
             lineTension: 0.1,
             backgroundColor: "rgba(75,192,192,0.4)",
